@@ -1,11 +1,24 @@
 import './App.css'
+import { Filter } from './components/filter'
+import { Footer } from './components/footer';
+import { Timetable } from './components/timetable';
+import { useState } from 'react';
+
 
 function App() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedSubGroup, setSelectedSubGroup] = useState(1);
+
+      if (!selectedDate) {
+        setSelectedDate(new Date());
+      }
 
   return (
-    <>
-     <div className=' text-red-600 text-2xl'>hello World</div>
-    </>
+    <div className='m-4'>
+    <Filter date={{selectedDate,setSelectedDate}} subGroup={{selectedSubGroup,setSelectedSubGroup}}/>
+    <Timetable  date={{selectedDate,setSelectedDate}} subGroup={{selectedSubGroup,setSelectedSubGroup}}/>
+    <Footer/>
+    </div>
   )
 }
 

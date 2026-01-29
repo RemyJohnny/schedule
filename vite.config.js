@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/schedule/',
   plugins: [
     react(), 
     tailwindcss(),
@@ -14,6 +15,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'favicon.svg', 'apple-touch-icon.png'],
       manifest: {
+        id: '/schedule/',
         name: 'Timetable',
         short_name: 'Timetable',
         theme_color: '#ffffff',
@@ -48,7 +50,6 @@ export default defineConfig({
             type: 'image/png'
           }
         ],
-        base: '/schedule/'
       }
     })
   ],

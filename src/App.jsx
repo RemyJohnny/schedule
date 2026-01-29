@@ -1,5 +1,5 @@
 import './App.css'
-import { Filter } from './components/filter'
+import { Filter } from './components/Filter'
 import { Footer } from './components/footer';
 import { Timetable } from './components/timetable';
 import { useState } from 'react';

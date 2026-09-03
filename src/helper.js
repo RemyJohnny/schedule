@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 // Determines the current academic week
 // semesterStartDate (YYYY-MM-DD format)
 function getCurrentAcademicWeek(currentDateParam) {
-    const startDate = new Date("2026-01-22");
+    const startDate = new Date("2026-09-01");
     if (isNaN(startDate)) {
         throw new Error("Error parsing date");
     }
